@@ -1,14 +1,13 @@
 import React from 'react'
 import {
   StyleSheet,
-  Image,
   Text,
   View,
   ScrollView,
   TouchableOpacity,
 } from 'react-native'
 
-import { AntDesign } from '@expo/vector-icons'
+import { CartItem } from '.'
 
 const bikeCategories = [
   'All',
@@ -67,48 +66,53 @@ const HomeContents = () => {
         {/* Cart Item list */}
         <ScrollView
           style={{}}
+          showsVerticalScrollIndicator={false}
+          horizontal={false}
           contentContainerStyle={{
+            width: '100%',
             flexDirection: 'row',
             flexWrap: 'wrap',
             justifyContent: 'flex-start',
             alignItems: 'center',
+            marginVertical: 20,
           }}
         >
-          <View style={styles.cart_item}>
-            <AntDesign
-              style={{
-                padding: '0.2em',
-                backgroundColor: 'white',
-                borderRadius: 25,
-                alignSelf: 'flex-end',
-              }}
-              name="hearto"
-              size={20}
-              color="#dc3c11"
-            />
-            <View style={{}}>
-              <Image
-                style={{
-                  width: 120,
-                  height: 120,
-                  display: 'block',
-                }}
-                source={{
-                  uri: 'https://www.pngmart.com/files/6/Bicycle-Transparent-PNG.png',
-                }}
-              />
-              <Text
-                style={{ color: '#a4a3a3', fontWeight: '800', fontSize: 18 }}
-              >
-                Brompton Bike*
-              </Text>
-              <Text
-                style={{ color: '#dc3c11', fontSize: 20, fontWeight: '700' }}
-              >
-                $ <Text style={{ color: '#151110' }}>1,250.00</Text>
-              </Text>
-            </View>
-          </View>
+          <CartItem
+            isFavourite
+            name="Brompton Bike*"
+            price="1,250.00"
+            imageSrc="https://www.pngmart.com/files/6/Bicycle-Transparent-PNG.png"
+          />
+
+          <CartItem
+            name="Mountain Bike"
+            price="1,383.00"
+            imageSrc="https://www.pngmart.com/files/6/Bicycle-Transparent-Background.png"
+          />
+
+          <CartItem
+            name="Mountain Bike"
+            price="1,383.00"
+            imageSrc="https://www.pngmart.com/files/6/Bicycle-Transparent-Background.png"
+          />
+
+          <CartItem
+            name="Mountain Bike"
+            price="1,383.00"
+            imageSrc="https://www.pngmart.com/files/6/Bicycle-Transparent-Background.png"
+          />
+
+          <CartItem
+            name="Mountain Bike"
+            price="1,383.00"
+            imageSrc="https://www.pngmart.com/files/6/Bicycle-Transparent-Background.png"
+          />
+
+          <CartItem
+            name="Mountain Bike"
+            price="1,383.00"
+            imageSrc="https://www.pngmart.com/files/6/Bicycle-Transparent-Background.png"
+          />
         </ScrollView>
       </View>
     </View>
@@ -128,18 +132,5 @@ const styles = StyleSheet.create({
     marginVertical: 0,
     marginHorizontal: 'auto',
     padding: '1em',
-  },
-
-  cart_item: {
-    maxWidth: '45%',
-    backgroundColor: '#e9e8ed',
-    padding: '1em',
-    margin: 10,
-    borderRadius: 25,
-
-    textAlign: 'cemter',
-
-    justifyContent: 'space-evenly',
-    alignItems: 'center',
   },
 })
