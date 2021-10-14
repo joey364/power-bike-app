@@ -26,9 +26,10 @@ const HomeHeader = () => {
   )
 }
 
+export default HomeHeader
+
 const styles = StyleSheet.create({
   container: {
-    flexGrow: 1,
     backgroundColor: 'white',
   },
   container_contents: {
@@ -48,5 +49,3 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 })
-
-export default HomeHeader
