@@ -1,14 +1,78 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs'
+import { MaterialCommunityIcons, Ionicons } from '@expo/vector-icons'
+
+import { Cart } from '.'
+import { HomeContents } from '../components'
+
+const Tab = createMaterialBottomTabNavigator()
+
 const Home = () => {
-    return (
-        <View>
-            <Text>Home screen</Text>
-        </View>
-    )
+  return (
+    <View style={styles.container}>
+      <Tab.Navigator barStyle={styles.barStyle} labeled={false}>
+        <Tab.Screen
+          name="HomeContents"
+          component={HomeContents}
+          options={{
+            tabBarIcon: ({ focused = true }) => (
+              <MaterialCommunityIcons
+                name="home-outline"
+                color={focused ? '#dc3c11' : '#151110'}
+                size={26}
+              />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Record"
+          component={HomeContents}
+          options={{
+            tabBarIcon: ({ focused }) => (
+              <Ionicons
+                style={{
+                  transform: [{ translateY: '-35%' }],
+                  padding: '0.3em',
+                  backgroundColor: focused ? '#dc3c11' : '#151110',
+                  borderRadius: 20,
+                }}
+                name="mic-outline"
+                color={'white'}
+                size={26}
+              />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Cart"
+          component={Cart}
+          options={{
+            tabBarIcon: ({ focused }) => (
+              <MaterialCommunityIcons
+                name="shopping-outline"
+                size={26}
+                color={focused ? '#dc3c11' : '#151110'}
+              />
+            ),
+          }}
+        />
+      </Tab.Navigator>
+    </View>
+  )
 }
 
 export default Home
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container: {
+    flexGrow: 1,
+  },
+  barStyle: {
+    backgroundColor: '#e9e8ed',
+    overflow: 'visible',
+    position: 'relative',
+    // zIndex: 2,
+  },
+})
