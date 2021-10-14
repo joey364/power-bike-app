@@ -44,7 +44,7 @@ const Login = ({ navigation }) => {
             },
           ]}
           onPress={() => {
-            navigation.navigate('Home')
+            navigation.navigate('Main')
           }}
         >
           <FontAwesome name="google" size={24} color="black" />
@@ -61,7 +61,7 @@ const Login = ({ navigation }) => {
             },
           ]}
           onPress={() => {
-            navigation.navigate('Home')
+            navigation.navigate('Main')
           }}
         >
           <FontAwesome name="apple" size={24} color="white" />
