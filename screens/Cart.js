@@ -1,12 +1,10 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet } from 'react-native'
 
-const Cart = () => {
-    return (
-        <View>
-            <Text>Product catalogue screen</Text>
-        </View>
-    )
+import { CartContents } from '../components'
+
+const Cart = ({ navigation }) => {
+  return <CartContents navigation={navigation} />
 }
 
 export default Cart
