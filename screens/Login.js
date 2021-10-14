@@ -40,7 +40,7 @@ const Login = ({ navigation }) => {
           style={[
             styles.button_base,
             {
-              backgroundColor: 'whitesmoke',
+              backgroundColor: '#e9e8ed',
             },
           ]}
           onPress={() => {
@@ -48,7 +48,7 @@ const Login = ({ navigation }) => {
           }}
         >
           <FontAwesome name="google" size={24} color="black" />
-          <Text style={{ color: '#e9e8ed', fontSize: 16, marginLeft: 20 }}>
+          <Text style={{ color: '#151110', fontSize: 16, marginLeft: 20 }}>
             Login with Gmail
           </Text>
         </TouchableOpacity>
@@ -65,7 +65,7 @@ const Login = ({ navigation }) => {
           }}
         >
           <FontAwesome name="apple" size={24} color="white" />
-          <Text style={{ color: '#a4a3a3', fontSize: 16, marginLeft: 20 }}>
+          <Text style={{ color: '#e9e8ed', fontSize: 16, marginLeft: 20 }}>
             Login with Apple
           </Text>
         </TouchableOpacity>
