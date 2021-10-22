@@ -2,7 +2,7 @@ import React from 'react'
 import { StyleSheet, TouchableOpacity, View, Text } from 'react-native'
 import { Ionicons } from '@expo/vector-icons'
 
-const HomeHeader = ({ navigation }) => {
+const CartHeader = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.container_contents}>
@@ -54,4 +54,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default HomeHeader
+export default CartHeader
