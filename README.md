@@ -2,13 +2,13 @@
 
 ### Screenshots
 
-Login Screen;  
+Login Screen  
 <img src="./screenshots/LoginScreen.png" alt="Login Screen" width="150" height="310" />
 
-Home Screen;  
+Home Screen  
 <img src="./screenshots/HomeScreen.png" alt="Home Screen" width="150" height="310" />
 
-Cart Screen;  
+Cart Screen  
 <img src="./screenshots/CartScreen.png" alt="Cart Screen" width="150" height="310" />
 
 ### Credits
