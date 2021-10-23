@@ -4,10 +4,10 @@ import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import { CartHeader, CheckoutItem } from '.'
 import { colors } from '../utils'
 
-const CartContents = () => {
+const CartContents = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <CartHeader />
+      <CartHeader navigation={navigation} />
       <View style={styles.container_contents}>
         <CheckoutItem name={'PoloG Bike'} category={'BMX'} price={'1,700.00'} />
         <CheckoutItem name={'PoloG Bike'} category={'BMX'} price={'1,700.00'} />
