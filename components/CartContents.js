@@ -2,6 +2,7 @@ import React from 'react'
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 
 import { CartHeader, CheckoutItem } from '.'
+import { colors } from '../utils'
 
 const CartContents = () => {
   return (
@@ -24,76 +25,48 @@ const CartContents = () => {
           marginBottom: 20,
         }}
       >
-        <Text
-          style={{
-            color: '#151110',
-            fontSize: 18,
-            fontWeight: 300,
-            marginBottom: 10,
-          }}
-        >
-          Subtotal{' '}
-          <Text
-            style={{
-              alignSelf: 'flex-end',
-              fontWeight: '700',
-              color: '#dc3d11',
-            }}
-          >
-            $ <Text style={{ color: '#151110' }}>3,400.00</Text>
+        <View style={styles.checkoutPriceContainer}>
+          <Text style={styles.priceHeadingText} >SubTotal</Text>
+          <Text style={styles.priceText}>
+            $ <Text style={{ color: colors.primary_dark }}>3,400.00</Text>{' '}
           </Text>
-        </Text>
+        </View>
+        <View style={styles.checkoutPriceContainer}>
+          <Text style={styles.priceHeadingText}>Shopping fee</Text>
+          <Text style={styles.priceText}>
+            $ <Text style={{ color: colors.primary_dark }}>100.00</Text>
+          </Text>
+        </View>
 
-        <Text
+        {/* divider */}
+        <View
           style={{
-            color: '#151110',
-            fontSize: 18,
-            fontWeight: 300,
-            marginBottom: 20,
+            width: '95%',
+            height: 2,
+            marginHorizontal: 'auto',
+            marginVertical: 10,
+            backgroundColor: colors.neutral,
           }}
-        >
-          Shopping fee{' '}
-          <Text
-            style={{
-              alignSelf: 'flex-end',
-              fontWeight: '700',
-              color: '#dc3d11',
-            }}
-          >
-            $ <Text style={{ color: '#151110' }}>100.00</Text>
-          </Text>
-        </Text>
+        />
 
-        <Text
-          style={{
-            color: '#151110',
-            fontSize: 18,
-            fontWeight: 300,
-            marginBottom: 10,
-          }}
-        >
-          Total{' '}
-          <Text
-            style={{
-              alignSelf: 'flex-end',
-              fontWeight: '700',
-              color: '#dc3d11',
-            }}
-          >
-            $ <Text style={{ color: '#151110' }}>3,500.00</Text>
+        <View style={styles.checkoutPriceContainer}>
+          <Text style={[styles.priceHeadingText, { color: colors.primary_dark }]} >Total</Text>
+          <Text style={styles.priceText}>
+            $ <Text style={{ color: colors.primary_dark }}>3,500.00</Text>{' '}
           </Text>
-        </Text>
+        </View>
       </View>
 
       {/* Checkout Button */}
       <View>
         <TouchableOpacity
           style={{
-            backgroundColor: '#dc3c11',
+            backgroundColor: colors.accent,
             maxWidth: '80%',
             borderRadius: 15,
             padding: '1em',
             marginHorizontal: 'auto',
+            marginVertical: 10,
           }}
         >
           <Text style={{ fontSize: 22, color: '#e9e8ed', fontWeight: '700' }}>
@@ -117,5 +90,23 @@ const styles = StyleSheet.create({
     marginVertical: 0,
     marginHorizontal: 'auto',
     padding: '1em',
+  },
+  priceHeadingText: {
+    color: colors.neutral,
+    fontWeight: '800',
+    fontSize: 16,
+  },
+  priceText: {
+    fontWeight: 'bold',
+    color: colors.accent,
+    fontSize: 20,
+    margin: 10,
+  },
+
+  checkoutPriceContainer: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
   },
 })
