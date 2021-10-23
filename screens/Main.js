@@ -5,21 +5,26 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 import { MaterialCommunityIcons, Ionicons } from '@expo/vector-icons'
 
 import { Cart, Home } from '.'
+import { colors } from '../utils'
 
 const Tab = createMaterialBottomTabNavigator()
 
 const Main = () => {
   return (
     <View style={styles.container}>
-      <Tab.Navigator barStyle={styles.barStyle} labeled={false}>
+      <Tab.Navigator
+        barStyle={styles.barStyle}
+        labeled={false}
+        initialRouteName="Cart"
+      >
         <Tab.Screen
-          name="HomeContents"
+          name="Home"
           component={Home}
           options={{
             tabBarIcon: ({ focused = true }) => (
               <MaterialCommunityIcons
                 name="home-outline"
-                color={focused ? '#dc3c11' : '#151110'}
+                color={focused ? colors.accent : colors.primary_dark}
                 size={26}
               />
             ),
@@ -34,7 +39,9 @@ const Main = () => {
                 style={{
                   transform: [{ translateY: '-35%' }],
                   padding: '0.3em',
-                  backgroundColor: focused ? '#dc3c11' : '#151110',
+                  backgroundColor: focused
+                    ? colors.accent
+                    : colors.primary_dark,
                   borderRadius: 20,
                 }}
                 name="mic-outline"
@@ -55,7 +62,7 @@ const Main = () => {
                 }}
                 name="shopping-outline"
                 size={26}
-                color={focused ? '#dc3c11' : '#151110'}
+                color={focused ? colors.accent : colors.primary_dark}
               />
             ),
           }}
@@ -72,7 +79,7 @@ const styles = StyleSheet.create({
     flexGrow: 1,
   },
   barStyle: {
-    backgroundColor: '#e9e8ed',
+    backgroundColor: colors.primary_light,
     overflow: 'visible',
     position: 'relative',
     // zIndex: 2,

@@ -1,6 +1,7 @@
 import React from 'react'
 import { StyleSheet, TouchableOpacity, View, Text } from 'react-native'
 import { Ionicons } from '@expo/vector-icons'
+import { colors } from '../utils'
 
 const CartHeader = ({ navigation }) => {
   return (
@@ -17,11 +18,21 @@ const CartHeader = ({ navigation }) => {
         {/* middle */}
         <TouchableOpacity style={styles.header_middle}>
           <View>
-            <Text style={{ fontWeight: '700', color: '#151110', fontSize: 18 }}>
+            <Text
+              style={{
+                fontWeight: '700',
+                color: colors.primary_dark,
+                fontSize: 18,
+              }}
+            >
               Cart list
             </Text>
             <Text
-              styles={{ fontWeight: '400', color: '#e9e8ed', fontSize: 18 }}
+              styles={{
+                fontWeight: '400',
+                color: colors.primary_light,
+                fontSize: 18,
+              }}
             >
               {'(3 items)'}
             </Text>

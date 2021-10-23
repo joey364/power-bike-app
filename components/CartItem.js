@@ -1,6 +1,7 @@
 import React from 'react'
 import { StyleSheet, Text, View, Image } from 'react-native'
 import { AntDesign } from '@expo/vector-icons'
+import { colors } from '../utils'
 
 const CartItem = ({
   isFavourite = false,
@@ -19,7 +20,7 @@ const CartItem = ({
         }}
         name="hearto"
         size={20}
-        color={isFavourite ? '#dc3c11' : '#151110'}
+        color={isFavourite ? colors.accent : colors.primary_dark}
       />
       <View style={{}}>
         <Image
@@ -33,11 +34,13 @@ const CartItem = ({
             uri: imageSrc,
           }}
         />
-        <Text style={{ color: '#a4a3a3', fontWeight: '800', fontSize: 18 }}>
+        <Text
+          style={{ color: colors.neutral, fontWeight: '800', fontSize: 18 }}
+        >
           {name}
         </Text>
-        <Text style={{ color: '#dc3c11', fontSize: 20, fontWeight: '700' }}>
-          $ <Text style={{ color: '#151110' }}>{price}</Text>
+        <Text style={{ color: colors.accent, fontSize: 20, fontWeight: '700' }}>
+          $ <Text style={{ color: colors.primary_dark }}>{price}</Text>
         </Text>
       </View>
     </View>
@@ -49,7 +52,7 @@ export default CartItem
 const styles = StyleSheet.create({
   cart_item: {
     maxWidth: '45%',
-    backgroundColor: '#e9e8ed',
+    backgroundColor: colors.primary_light,
     padding: '1em',
 
     marginLeft: 10,

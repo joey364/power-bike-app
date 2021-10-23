@@ -1,6 +1,7 @@
 import React from 'react'
 import { StyleSheet, Image, Text, View, TouchableOpacity } from 'react-native'
 import { FontAwesome } from '@expo/vector-icons'
+import { colors } from '../utils'
 
 const Login = ({ navigation }) => {
   return (
@@ -40,7 +41,7 @@ const Login = ({ navigation }) => {
           style={[
             styles.button_base,
             {
-              backgroundColor: '#e9e8ed',
+              backgroundColor: colors.primary_light,
             },
           ]}
           onPress={() => {
@@ -48,7 +49,13 @@ const Login = ({ navigation }) => {
           }}
         >
           <FontAwesome name="google" size={24} color="black" />
-          <Text style={{ color: '#151110', fontSize: 16, marginLeft: 20 }}>
+          <Text
+            style={{
+              color: colors.primary_dark,
+              fontSize: 16,
+              marginLeft: 20,
+            }}
+          >
             Login with Gmail
           </Text>
         </TouchableOpacity>
@@ -57,7 +64,7 @@ const Login = ({ navigation }) => {
           style={[
             styles.button_base,
             {
-              backgroundColor: '#151110',
+              backgroundColor: colors.primary_dark,
             },
           ]}
           onPress={() => {
@@ -65,14 +72,20 @@ const Login = ({ navigation }) => {
           }}
         >
           <FontAwesome name="apple" size={24} color="white" />
-          <Text style={{ color: '#e9e8ed', fontSize: 16, marginLeft: 20 }}>
+          <Text
+            style={{
+              color: colors.primary_light,
+              fontSize: 16,
+              marginLeft: 20,
+            }}
+          >
             Login with Apple
           </Text>
         </TouchableOpacity>
 
         <Text style={[styles.button_text, { color: '#6f7f88' }]}>
           Not a memeber?{' '}
-          <Text style={{ color: '#dc3c11', fontSize: 16 }}>Sign up</Text>
+          <Text style={{ color: colors.accent, fontSize: 16 }}>Sign up</Text>
         </Text>
       </View>
     </View>

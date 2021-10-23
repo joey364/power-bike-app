@@ -8,6 +8,7 @@ import {
 } from 'react-native'
 
 import { CartItem, HomeHeader } from '.'
+import { colors } from '../utils'
 
 const bikeCategories = [
   'All',
@@ -27,14 +28,20 @@ const HomeContents = () => {
           <Text
             style={{
               fontWeight: '900',
-              color: '#e9e8ed',
+              color: colors.primary_light,
               fontSize: 18,
               marginBottom: 10,
             }}
           >
-            The world's <Text style={{ color: '#dc3c11' }}>Best Bike</Text>
+            The world's <Text style={{ color: colors.accent }}>Best Bike</Text>
           </Text>
-          <Text style={{ color: '#151110', fontWeight: 'bold', fontSize: 20 }}>
+          <Text
+            style={{
+              color: colors.primary_dark,
+              fontWeight: 'bold',
+              fontSize: 20,
+            }}
+          >
             Categories
           </Text>
 
@@ -49,11 +56,11 @@ const HomeContents = () => {
                 <TouchableOpacity key={idx} activeOpacity={0.75}>
                   <Text
                     style={{
-                      color: '#a4a3a3',
+                      color: colors.neutral,
                       fontSize: 20,
                       fontWeight: '600',
                       padding: '0.55em',
-                      backgroundColor: '#e9e8ed',
+                      backgroundColor: colors.primary_light,
                       marginRight: 10,
                       borderRadius: 17,
                     }}
@@ -74,9 +81,8 @@ const HomeContents = () => {
               width: '100%',
               flexDirection: 'row',
               flexWrap: 'wrap',
-              justifyContent: 'flex-start',
+              justifyContent: 'space-evenly',
               alignItems: 'center',
-              marginVertical: 20,
             }}
           >
             <CartItem

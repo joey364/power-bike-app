@@ -17,7 +17,7 @@ const CartContents = ({ navigation }) => {
       {/* SubTotal */}
       <View
         style={{
-          backgroundColor: '#e9e8ed',
+          backgroundColor: colors.primary_light,
           width: '90%',
           borderRadius: 15,
           padding: '1em',
@@ -26,7 +26,7 @@ const CartContents = ({ navigation }) => {
         }}
       >
         <View style={styles.checkoutPriceContainer}>
-          <Text style={styles.priceHeadingText} >SubTotal</Text>
+          <Text style={styles.priceHeadingText}>SubTotal</Text>
           <Text style={styles.priceText}>
             $ <Text style={{ color: colors.primary_dark }}>3,400.00</Text>{' '}
           </Text>
@@ -50,7 +50,11 @@ const CartContents = ({ navigation }) => {
         />
 
         <View style={styles.checkoutPriceContainer}>
-          <Text style={[styles.priceHeadingText, { color: colors.primary_dark }]} >Total</Text>
+          <Text
+            style={[styles.priceHeadingText, { color: colors.primary_dark }]}
+          >
+            Total
+          </Text>
           <Text style={styles.priceText}>
             $ <Text style={{ color: colors.primary_dark }}>3,500.00</Text>{' '}
           </Text>
@@ -69,7 +73,13 @@ const CartContents = ({ navigation }) => {
             marginVertical: 10,
           }}
         >
-          <Text style={{ fontSize: 22, color: '#e9e8ed', fontWeight: '700' }}>
+          <Text
+            style={{
+              fontSize: 22,
+              color: colors.primary_light,
+              fontWeight: '700',
+            }}
+          >
             Proceed to Checkout
           </Text>
         </TouchableOpacity>
