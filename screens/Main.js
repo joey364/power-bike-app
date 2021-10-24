@@ -15,7 +15,7 @@ const Main = () => {
       <Tab.Navigator
         barStyle={styles.barStyle}
         labeled={false}
-        initialRouteName="Cart"
+        initialRouteName="Home"
       >
         <Tab.Screen
           name="Home"
